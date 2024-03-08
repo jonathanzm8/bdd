@@ -32,3 +32,15 @@ insert into registro_entrada(codigo_registro,cedula_empleado,fecha,hora)
 values(10,'1245774657','28/09/2024','13:00')
 
 select * from registro_entrada
+
+select cedula_empleado,fecha,hora from resgistro_entrada
+
+select * from registro_entrada where hora
+
+between '07:00' and '14:00'
+
+select * from registro_entrada where hora> '08:00'
+
+
+
+
