@@ -44,3 +44,4 @@ select * from registro_entrada where hora> '08:00'
 
 update registro_entrada set cedula_empleado='082345679' where fecha= '07/01/2024'
 
+delete from registro_entrada where fecha='06/01/2024'

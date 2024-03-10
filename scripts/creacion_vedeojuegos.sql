@@ -38,3 +38,4 @@ select * from videojuegos where descripcion is null
 
 update videojuegos set descripcion= 'mejor puntuado' where valoracion>9
 
+delete from videojuegos where valoracion>7
