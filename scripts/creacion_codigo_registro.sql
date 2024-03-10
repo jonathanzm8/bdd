@@ -42,5 +42,5 @@ between '07:00' and '14:00'
 select * from registro_entrada where hora> '08:00'
 
 
-
+update registro_entrada set cedula_empleado='082345679' where fecha= '07/01/2024'
 
