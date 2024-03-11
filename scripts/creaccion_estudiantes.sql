@@ -37,3 +37,10 @@ select * from estudiantes where nombre like 'A%'
 
 update estudiantes set apellido='Hernandez' where cedula like '17%'
 delete from estudiantes where cedula like '%05'
+
+
+select * from estudiantes where nombre like 'M%' or apellido like '%z'
+
+select * from estudiantes where cedula like '32' and cedula like'18%'
+
+select * from estudiantes where cedula like '%06' or cedula like '17%'

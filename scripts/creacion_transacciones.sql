@@ -41,3 +41,12 @@ select codigo,monto,tipo,fecha from transacciones where fecha is not null
 update transacciones set tipo ='T' where monto between money(100) and money(500) and fecha='09/01/2024' and  hora= '14:00' and hora= '20:00'
 
 delete from transacciones where  hora='14:00' and hora='18:00' and fecha= '08/01/2024'
+
+select * from transacciones where (tipo = 'c') and numero_cuenta= '222001' and numero_cuenta= '22004'
+
+select * from transacciones where (tipo = 'd' and fecha= '25/05/2024') and (numero_cuenta='22007' and numero_cuenta='22010')
+
+select * from transacciones where (codigo= 1 and codigo= 5) and (numero_cuenta='22' or numero_cuenta= '22004') and (fecha='26/05/2024' and fecha='29/05/2024')
+								   
+								   
+

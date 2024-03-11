@@ -45,3 +45,9 @@ select * from registro_entrada where hora> '08:00'
 update registro_entrada set cedula_empleado='082345679' where fecha= '07/01/2024'
 
 delete from registro_entrada where fecha='06/01/2024'
+
+select * from registro_entrada where fecha= '09/01/2024' or cedula_empleado like '17%'
+
+select * from registro_entrada where(fecha= '09/01/2024' and cedula_empleado like '17%') and (hora='08:00' and hora= '12:00')
+
+select * from registro_entrada where (fecha= '08/01/2024' and cedula_empleado like '17%')and (hora='08:00' and hora= '12:00') or (fecha= '09/01/2024' and cedula_empleado like '08%') and (hora='09:00' and hora= '13:00') 

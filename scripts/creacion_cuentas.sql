@@ -43,3 +43,9 @@ between '07/03/2024' and '07/01/2024'
 update cuentas set saldo=10 where cedula_propietario like '17%'
 
 delete from cuentas where cedula_propietario like '10%'
+
+select * from cuentas where saldo>money(100) and saldo<money(1000)
+
+select * from cuentas where fecha_creacion = '10/02/2024' and fecha_creacion= '10/02/2023'
+
+select * from cuentas where saldo=money(0) or cedula_propietario like '%2' 

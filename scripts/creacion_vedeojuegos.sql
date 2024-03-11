@@ -10,20 +10,20 @@ create table videojuegos(
 )
 
 insert into videojuegos(codigo,nombre,descripcion,valoracion)
-values(1,'juego1','juego de gerra',10)
+values(1,'juego1','juego de gerra',10);
 insert into videojuegos(codigo,nombre,descripcion,valoracion)
-values(2,'juego2','juego de carros',20)
+values(2,'juego2','juego de carros',20);
 insert into videojuegos(codigo,nombre,descripcion,valoracion)
-values(3,'juego3','juego de aventura',30)
+values(3,'juego3','juego de aventura',30);
 insert into videojuegos(codigo,nombre,descripcion,valoracion)
-values(4,'juego4','juego de razonamiento',40)
+values(4,'juego4','juego de razonamiento',40);
 insert into videojuegos(codigo,nombre,descripcion,valoracion)
-values(5,'juego5','juego de combate',50)
+values(5,'juego5','juego de combate',50);
 
 insert into videojuegos(codigo,nombre,valoracion)
-values(6,'juego6',10)
+values(6,'juego6',10);
 insert into videojuegos(codigo,nombre,valoracion)
-values(7,'juego7',20)
+values(7,'juego7',20);
 insert into videojuegos(codigo,nombre,valoracion)
 values(8,'juego8',30)
 
@@ -39,3 +39,12 @@ select * from videojuegos where descripcion is null
 update videojuegos set descripcion= 'mejor puntuado' where valoracion>9
 
 delete from videojuegos where valoracion>7
+
+select * from videojuegos where nombre like 'c' or valoracion= 7
+
+select * from videojuegos where (codigo= 3 and  codigo = 7 ) or valoracion= 7
+
+select * from videojuegos where (valoracion > 7 and nombre like 'C') or (valoracion> 8 and nombre like 'D')
+
+
+
