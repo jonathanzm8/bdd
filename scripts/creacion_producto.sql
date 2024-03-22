@@ -30,6 +30,8 @@ insert into productos(codigo,nombre, precio,stock)
 values(17,'uvas',1.00,34)
 insert into productos(codigo,nombre, precio,stock)
 values(18,'durazno',1.50,25)
+insert into productos(codigo,nombre, precio,stock)
+values(19,'mango',1.34,22)
 
 select * from productos where nombre like 'Q%'
 
@@ -47,4 +49,27 @@ select * from productos where nombre like 'm%' or descripcion= ''
 
 select * from productos 
 where descripcion is null or stock= 0
+
+select * from ventas
+create table ventas(
+	id_ventas int,
+	codigo_producto int,
+	fecha_venta date ,
+	cantidad int,
+	
+	constraint ventas_key primary key (id_ventas)
+)
+-- creacion de foreing key 
+alter table ventas
+add constraint ventas_productos_fk 
+foreign key (codigo_producto)
+references producto(codigo)
+
+insert into ventas (id_ventas, codigo_producto, fecha_venta, cantidad)
+values(1,13,'2024/08/22',12)
+insert into ventas (id_ventas, codigo_producto, fecha_venta, cantidad)
+values(2,19,'2024/08/29',4)
+insert into ventas (id_ventas, codigo_producto, fecha_venta, cantidad)
+values(3,13,'2024/08/29',8)
+
 

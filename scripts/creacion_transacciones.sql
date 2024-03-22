@@ -48,5 +48,29 @@ select * from transacciones where (tipo = 'd' and fecha= '25/05/2024') and (nume
 
 select * from transacciones where (codigo= 1 and codigo= 5) and (numero_cuenta='22' or numero_cuenta= '22004') and (fecha='26/05/2024' and fecha='29/05/2024')
 								   
-								   
+
+select * from transacciones
+select * from banco
+
+create table banco(
+	codigo_banco int,
+	codidigo_transaccion int ,
+	detalle varchar(100),
+	constraint banco_key primary key (codigo_banco)
+)
+
+insert into banco(codigo_banco,codidigo_transaccion,detalle)
+values(1112,1,'detalle de la tansaccion por motivps de pagos ')
+insert into banco(codigo_banco,codidigo_transaccion,detalle)
+values(1113,3,'detalle de la tansaccion por pago de deuda ')
+insert into banco(codigo_banco,codidigo_transaccion,detalle)
+values(1114,1,'detalle de la tansaccion por motivps de pagos ')
+insert into banco(codigo_banco,codidigo_transaccion,detalle)
+values(1115,2,'detalle de la tansaccion por compra de uan moto ')
+
+alter table banco
+add constraint banco_transaccion_key 
+foreign key (codidigo_transaccion)
+references transacciones(codigo)
+
 

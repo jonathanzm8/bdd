@@ -26,7 +26,12 @@ insert into estudiantes(cedula,nombre,apellido,enail,fecha_nacimiento)
 values('1135227609','jose','condor','jose@gmail.com','23/07/1997')
 insert into estudiantes(cedula,nombre,apellido,enail,fecha_nacimiento)
 values('1111487609','pepe','perez','pepe@gmail.com','30/12/1996')
-
+insert into estudiantes(cedula,nombre,apellido,enail,fecha_nacimiento,codigo_profesor)
+values('1111487608','luis','Ancon','luis@gmail.com','30/12/1990',1112)
+insert into estudiantes(cedula,nombre,apellido,enail,fecha_nacimiento,codigo_profesor)
+values('1111487611','jose','narvaes','luis@gmail.com','30/12/1990',1112)
+insert into estudiantes(cedula,nombre,apellido,enail,fecha_nacimiento,codigo_profesor)
+values('1111487622','josefina','neon','josefina@gmail.com','30/09/1999',1113)
 select * from estudiantes
 
 select nombre, cedula from estudiantes
@@ -44,3 +49,26 @@ select * from estudiantes where nombre like 'M%' or apellido like '%z'
 select * from estudiantes where cedula like '32' and cedula like'18%'
 
 select * from estudiantes where cedula like '%06' or cedula like '17%'
+
+select * from estudiantes
+alter table estudiantes 
+add column codigo_profesor int
+
+select * from profesores
+create table profesores(
+	codigo int ,
+	nombre varchar,
+	constraint profesores_key primary key (codigo)
+	
+)
+insert into profesores(codigo, nombre)
+values(1112,'jonathan')
+insert into profesores(codigo, nombre)
+values(1113,'francisco')
+insert into profesores(codigo, nombre)
+values(1114,'Luis')
+
+alter table estudiantes
+add constraint estudiantes_profesores_fk 
+foreign key (codigo_profesor)
+references profesores (codigo)

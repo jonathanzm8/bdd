@@ -26,6 +26,12 @@ insert into videojuegos(codigo,nombre,valoracion)
 values(7,'juego7',20);
 insert into videojuegos(codigo,nombre,valoracion)
 values(8,'juego8',30)
+insert into videojuegos(codigo,nombre,valoracion)
+values(9,'corazon de acero',30)
+insert into videojuegos(codigo,nombre,valoracion)
+values(10,'dados',10)
+insert into videojuegos(codigo,nombre,valoracion)
+values(11,'god of war',30)
 
 select * from videojuegos
 select * from videojuegos where nombre like 'C%'
@@ -46,5 +52,29 @@ select * from videojuegos where (codigo= 3 and  codigo = 7 ) or valoracion= 7
 
 select * from videojuegos where (valoracion > 7 and nombre like 'C') or (valoracion> 8 and nombre like 'D')
 
+select * from videojuegos
+select * from plataforma
+
+create table plataforma(
+	id_plataforma int,
+	nombre_plataforma varchar(50),
+	codigo_videojuego int,
+	
+	constraint plataforma_key primary key (id_plataforma)
+	
+)
+insert into plataforma(id_plataforma, nombre_plataforma, codigo_videojuego)
+values(12,'plataforma nose',1)
+insert into plataforma(id_plataforma, nombre_plataforma, codigo_videojuego)
+values(13,'plataforma de guerra',11)
+insert into plataforma(id_plataforma, nombre_plataforma, codigo_videojuego)
+values(14,'plataforma peleas',11)
+insert into plataforma(id_plataforma, nombre_plataforma, codigo_videojuego)
+values(15,'plataforma carros',8)
+-- foreing key 
+alter table plataforma
+add constraint palataforma_videojuego_fk
+foreign key (codigo_videojuego)
+references videojuegos(codigo)
 
 
