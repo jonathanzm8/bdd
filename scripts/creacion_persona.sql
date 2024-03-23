@@ -49,3 +49,11 @@ where monto >money(100) and monto< money(500)
 
 select * from  persona per
 where per.nombre= 'Sean'
+
+
+
+select pre.cedula, sum(monto) as monto_total_prestamo from prestamo pre 
+group by(cedula)
+
+select per.numeros_hijos from persona per
+where numeros_hijos >1

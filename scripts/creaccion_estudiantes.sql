@@ -80,3 +80,10 @@ where est.apellido like '%n'
 
 select *from estudiantes est , profesores pro
 where est.codigo_profesor = 1113
+
+
+select count(es.nombre) , pro.codigo from estudiantes es,profesores pro
+group by(pro.codigo)
+
+select round(AVG((EXTRACT(YEAR FROM CURRENT_date)) - (EXTRACT( YEAR FROM fecha_nacimiento)))) as edad_promedio FROM estudiantes;
+

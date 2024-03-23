@@ -83,3 +83,10 @@ where video.descripcion = 'juego de gerra'
 
 select pla.id_plataforma,pla.nombre_plataforma, pla.codigo_videojuego from plataforma pla, videojuegos video
 where video.codigo = 11
+
+
+select  video.codigo ,count(id_plataforma) as tatal from plataforma , videojuegos video
+group by(codigo)
+
+select round(avg(valoracion),2) as valoracion_promedio from videojuegos
+

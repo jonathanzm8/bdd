@@ -79,3 +79,12 @@ where numero_cuenta= '22001' and numero_cuenta = '22004'
 
 select * from transacciones tran, banco ban
 where ban.codidigo_transaccion= 1
+
+
+
+
+select count(codigo) as transacciones from transacciones
+where tipo= 'c'
+
+select numero_cuenta , round(avg(cast(monto as decimal)),2) as monto_promedio from transacciones 
+group by( numero_cuenta)

@@ -90,3 +90,9 @@ values(2201,'luis','2024/05/12','14:30')
 select re.cedula_empleado, re.fecha , em.nombre from registro_entrada re, empleado em
 where re.fecha='2023/08/01' and re.fecha= '2023/08/31'
 
+select cedula_empleado, count(codigo_registro)  from registro_entrada, empleado
+
+group by(cedula_empleado)
+
+
+select max(fecha) as fecha_maxima , min(fecha) as fecha_minima from registro_entrada

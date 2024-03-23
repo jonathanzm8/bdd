@@ -86,3 +86,11 @@ where  saldo>money(100) and saldo<money(1000)
 
 select * from cuentas , usuario 
 where fecha_creacion ='22/09/21' and  fecha_creacion='23/09/21'
+
+
+select * from usuario
+select avg(cast(saldo as numeric)) from cuentas
+where cedula_propietario = '1105232977'
+
+select count (tipo_cuenta) , tipo_cuenta from usuario
+Group by (tipo_cuenta)

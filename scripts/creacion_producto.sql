@@ -78,3 +78,8 @@ where pro.nombre like 'm%'
 
 select pro.nombre , pro.stock  from productos pro 
 where pro.codigo = 5
+
+
+select max(precio) as precio_maximo from productos
+
+select sum(cantidad) as cantidad_vendida from ventas
