@@ -73,3 +73,8 @@ insert into ventas (id_ventas, codigo_producto, fecha_venta, cantidad)
 values(3,13,'2024/08/29',8)
 
 
+select pro.nombre, pro.stock, ven.cantidad from productos pro, ventas ven
+where pro.nombre like 'm%'
+
+select pro.nombre , pro.stock  from productos pro 
+where pro.codigo = 5

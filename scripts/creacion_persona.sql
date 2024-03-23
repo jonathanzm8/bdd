@@ -41,3 +41,11 @@ alter table prestamo
 add constraint prestamo_persona_fk 
 foreign key (cedula)
 references persona(cedula)
+
+select per.cantidad_ahorrada , pre.monto ,pre.grante from prestamo pre, persona per
+
+where monto >money(100) and monto< money(500)
+
+
+select * from  persona per
+where per.nombre= 'Sean'

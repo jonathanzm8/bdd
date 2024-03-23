@@ -84,3 +84,9 @@ insert into empleado(codigo_empleado,nombre,fecha,hora)
 values(1212,'jonathan','2024/08/12','14:00')
 insert into empleado(codigo_empleado,nombre,fecha,hora)
 values(2201,'luis','2024/05/12','14:30')
+
+
+
+select re.cedula_empleado, re.fecha , em.nombre from registro_entrada re, empleado em
+where re.fecha='2023/08/01' and re.fecha= '2023/08/31'
+

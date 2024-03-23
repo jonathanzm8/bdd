@@ -73,4 +73,9 @@ add constraint banco_transaccion_key
 foreign key (codidigo_transaccion)
 references transacciones(codigo)
 
+select * from transacciones 
+where tipo = 'c'
+where numero_cuenta= '22001' and numero_cuenta = '22004'
 
+select * from transacciones tran, banco ban
+where ban.codidigo_transaccion= 1

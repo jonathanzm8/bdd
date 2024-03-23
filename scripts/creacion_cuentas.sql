@@ -72,9 +72,17 @@ values('1234576890','jonathan','perez','corriente',12.3);
 insert into usuario(cedula,nombre, apellido,tipo_cuenta,limite_credito)
 values('1105232977','jonathan','perez','corriente',12.3);
 select * from usuario
+select * from cuentas
 
 -- creacion de foreing key 
 alter table cuentas
 add constraint cuentas_usuario_fk 
 foreign key (usuario_cuenta)
 references usuario(cedula)
+
+
+select usu.nombre, cu.numero_cuenta from usuario usu, cuentas cu
+where  saldo>money(100) and saldo<money(1000)
+
+select * from cuentas , usuario 
+where fecha_creacion ='22/09/21' and  fecha_creacion='23/09/21'

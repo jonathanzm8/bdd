@@ -38,3 +38,15 @@ values('12', '1105232922','2022/09/21', 20,'1105232922')
 
 insert into compras( id_compras, cedula, fecha_compra, monto, compra_cliente)
 values('13', '110523288','2022/09/29',920,'110523288')
+
+
+select cli.nombre, cli.apellido from clientes cli , compras com
+where cli.nombre like '%7'
+
+select * from clientes cli, compras com
+where cli.cedula = com.cedula 
+
+select * from clientes cli, compras com
+where cli.cedula = '110523288'
+
+

@@ -78,3 +78,8 @@ foreign key (codigo_videojuego)
 references videojuegos(codigo)
 
 
+select video.nombre, video.descripcion , video.valoracion, pla.nombre_plataforma from plataforma pla, videojuegos video
+where video.descripcion = 'juego de gerra' 
+
+select pla.id_plataforma,pla.nombre_plataforma, pla.codigo_videojuego from plataforma pla, videojuegos video
+where video.codigo = 11
